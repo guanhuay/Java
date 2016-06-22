@@ -1,0 +1,23 @@
+package ScoreCounter;
+import java.util.Scanner;
+
+public class ScoreCounter {
+	public static void main(String[] args){
+		int classNum = 3; //number of class
+		int stuNum = 4; //Number of student in each class
+		double sum = 0;
+		double avg = 0;
+		Scanner input = new Scanner(System.in);
+		for(int i=1;i<=classNum;i++){
+			System.out.println("Please input the " + i + "th class grade: ");
+			for(int j=1;j<=stuNum;j++)
+			{
+				System.out.println("Please input the " + i + "th studnet grade: ");
+				int score = input.nextInt();
+				sum = sum +score; //calculate the sum of score
+			}
+			avg = sum / stuNum; //get Avg
+			System.out.println("The " + i + "th class of student's avg is: " + avg);
+		}
+	}
+}
